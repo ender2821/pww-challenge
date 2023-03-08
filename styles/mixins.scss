@@ -1,0 +1,78 @@
+@import "./vars.scss";
+
+@mixin textBlock {
+  h1 {
+    color: $black;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    color: $black;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    color: $black;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  h4 {
+    color: $black;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  h5 {
+    color: $black;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+
+@mixin btnPrimary {
+    align-items: center;
+    background: $blue4;
+    color: $white;
+    display: flex;
+    letter-spacing: 1px;
+    padding: 2rem 3rem;
+    text-transform: uppercase;
+    transition: background 125ms ease;
+
+    &:hover, &:active {
+        background: $blue1;
+    }
+
+    svg {
+        margin-left: 1rem;
+    }
+}
+
+@mixin btnSecondary {
+    align-items: center;
+    background: white;
+    border: 2px solid $blue4;
+    color: $blue4;
+    display: flex;
+    letter-spacing: 1px;
+    padding: 2rem 3rem;
+    text-transform: uppercase;
+    transition: background 125ms ease, color 12ms ease;
+
+    &:hover, &:active {
+        background: $blue4;
+        color: $white;
+    }
+
+    svg {
+        margin-left: 1rem;
+    }
+}

@@ -1,0 +1,77 @@
+@import '../styles/mixins.scss';
+@import '../styles/vars.scss';
+
+.header {
+    align-items: center;
+    background: $white;
+    border-bottom: 2px solid $blue1;
+    display: flex;
+    width: 100%;
+
+    @media screen and (min-width: $small) {
+        border-bottom: 8px solid $blue1;
+        padding: 1rem 0;
+    }
+}
+
+.menuButton {
+    align-items: center;
+    background: $blue4;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    width: 8rem;
+
+    span {
+        color: $white;
+        font-size: 1.1rem;
+        letter-spacing: 0.5rem;
+    }
+}
+
+.headerContent {
+    align-items: center;
+    display: flex;
+    flex: 1 0 auto;
+
+    nav {
+        margin-left: auto;
+    }
+
+    a {
+        color: $blue3;
+        font-weight: 600;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+}
+
+.headerTextContain {
+    flex: 1 0 auto;
+}
+
+.searchButton {
+    @include btnSecondary;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 5rem;
+    padding: 1rem;
+    width: 5rem;
+
+    svg {
+        margin-left: 0;
+    }
+
+    &:hover, &:active {
+        background: $white;
+    }
+}
