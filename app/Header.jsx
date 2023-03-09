@@ -5,28 +5,24 @@ import styles from "./Header.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Roboto_Slab } from "next/font/google";
 
 import MenuIcon from "../public/menu-icon.svg";
 import CloseIcon from "../public/close-icon.svg";
 import CloseIconDark from "../public/close-icon-dark.svg";
 import SearchIcon from "../public/search-icon.svg";
 
-import { navData } from '../fakeData';
-
+import { Roboto_Slab } from "next/font/google";
 const robotoSlab = Roboto_Slab({ subsets: ["latin"] });
 
-
-
-
-export default function Header() {
+export default function Header(props) {
+  const {data} = props;
   const [menuOpen, setMenuOpen] = useState(false);
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
 
   const navSectionRender = (number) => {
       return (
       <ul>
-        {navData[number]?.map((item, i) => {
+        {data[number]?.map((item, i) => {
           return (
             <li key={i}>
               <Link href={item?.link}>

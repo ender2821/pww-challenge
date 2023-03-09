@@ -1,4 +1,7 @@
-
+import DataIcon from './public/Data-Research-Icon.svg';
+import GeographyIcon from './public/Geography-Icon.svg';
+import ProgramIcon from './public/Programs-Icon.svg';
+import LegislativeIcon from './public/Legislative-Icon.svg';
 
 export const navData = [
     [
@@ -140,3 +143,31 @@ export const navData = [
         },
     ]
 ];
+
+
+export const ctaData = [
+    {
+        name: 'Data & Research',
+        image: '/Data-Research-Icon.svg',
+        alt: 'Data & Research',
+        link: '/',
+    },
+    {
+        name: 'Geography & Mapping',
+        image: '/Geography-Icon.svg',
+        alt: 'Geography & Mapping',
+        link: '/',
+    },
+    {
+        name: 'Programs & Services',
+        image: '/Programs-Icon.svg',
+        alt: 'Programs & Services',
+        link: '/',
+    },
+    {
+        name: 'Legislative Fiscal Impacts',
+        image: '/Legislative-Icon.svg',
+        alt: 'Legislative Fiscal Impacts',
+        link: '/',
+    },
+]
