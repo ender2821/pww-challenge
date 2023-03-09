@@ -11,6 +11,7 @@
     position: absolute;
     top: 0;
     width: 100%;
+    z-index: 5;
 
     @media screen and (min-width: $small) {
         border-bottom: 8px solid $blue2;

@@ -170,4 +170,123 @@ export const ctaData = [
         alt: 'Legislative Fiscal Impacts',
         link: '/',
     },
+];
+
+export const servicesData = [
+    {
+        name: 'Overview and History of the South Carolina State Budget',
+        link: '/',
+    },
+    {
+        name: 'Overview and History of the South Carolina State Budget',
+        link: '/',
+    },
+    {
+        name: 'Overview and History of the South Carolina State Budget',
+        link: '/',
+    },
+    {
+        name: 'Employer Contribution Trends',
+        link: '/',
+    },
+    {
+        name: 'Employer Contribution Trends - June 4 2019',
+        link: '/',
+    },
+    {
+        name: 'Employer Contribution Trends - June 4 2019',
+        link: '/',
+    },
+    {
+        name: 'Appropriation Bills and Acts',
+        link: '/',
+    },
+    {
+        name: 'Executive Budget Office State Agency Budget Plans(Requests)',
+        link: '/',
+    },
+    {
+        name: 'Executive Budget Office State Agency Budget Plans(Requests)',
+        link: '/',
+    },
+];
+
+
+export const updatesData = [
+    {
+        title: 'Local Government Finance',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur feugiat tellus iaculis enim aliquet congue.',
+        date: 'Jan 2 2020',
+        tag: 'Updated',
+        link: '/',
+    },
+    {
+        title: 'Transportation Network Carrier Maps',
+        text: '',
+        date: 'Jan 2 2020',
+        tag: 'New',
+        link: '/',
+    },
+    {
+        title: 'BEA Long Range General Fund Revenue Plan for FY 2019-20 FY 2023-23',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur feugiat tellus iaculis enim aliquet congue.',
+        date: 'Dec 16 2019',
+        tag: 'Updated',
+        link: '/',
+    },
+    {
+        title: 'Budget Management',
+        text: '',
+        date: 'Dec 16 2019',
+        tag: 'New',
+        link: '/',
+    },
+    {
+        title: 'November 19 General Fund Revenue Digest',
+        text: '',
+        date: 'Dec 13 2019',
+        tag: 'New',
+        link: "/",
+    },
+];
+
+export const eventsData = [
+    {
+        tag: 'Updated',
+        month: 'Nov',
+        day: '22',
+        title: 'Board of Economic Advisors Meeting',
+        location: 'Room 417, Bowers Conferance Room, Rembert Dennis Building',
+        time: '1:30 pm',
+        phone: '(803) 734-2265',
+        link: '/',
+    },
+    {
+        tag: 'Cancelled',
+        month: 'Nov',
+        day: '23',
+        title: 'Board of Economic Advisors Meeting',
+        location: 'Room 417, Bowers Conferance Room, Rembert Dennis Building',
+        time: '1:30 pm',
+        phone: '(803) 734-2265',
+        link: '/',
+    },
+    {
+        month: 'Nov',
+        day: '25',
+        title: 'Board of Economic Advisors Meeting',
+        location: 'Room 417, Bowers Conferance Room, Rembert Dennis Building',
+        time: '1:30 pm',
+        phone: '(803) 734-2265',
+        link: '/',
+    },
+    {
+        month: 'Nov',
+        day: '28',
+        title: 'Board of Economic Advisors Meeting',
+        location: 'Room 417, Bowers Conferance Room, Rembert Dennis Building',
+        time: '1:30 pm',
+        phone: '(803) 734-2265',
+        link: '/',
+    },
 ]

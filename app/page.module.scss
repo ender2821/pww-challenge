@@ -7,3 +7,25 @@
         margin-top: 12.8rem;
     }
 }
+
+.content {
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: 0 1rem;
+    width: 100%;
+
+    @media screen and (min-width: $small) {
+        padding: 0 2rem;
+    }
+}
+
+.twoColumn {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+
+    @media screen and (min-width: $small) {
+        gap: 8rem;
+        grid-template-columns: 1fr 1fr;
+    }
+}

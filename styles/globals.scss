@@ -42,7 +42,6 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  overflow: hidden;
 }
 
 /* A elements that don't have a class get default styles */
@@ -119,6 +118,11 @@ a {
   color: $blue5;
   font-weight: 1.6rem;
   text-decoration: underline;
+  transition: color 125ms ease;
+
+  &:hover, &:focus {
+    color: $blue1;
+  }
 }
 
 p {

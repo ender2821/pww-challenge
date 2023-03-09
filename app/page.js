@@ -9,11 +9,11 @@ import LinkList from '../components/LinkList';
 
 import styles from './page.module.scss'
 
-import { navData, ctaData } from '../fakeData';
+import { navData, ctaData, servicesData, updatesData, eventsData } from '../fakeData';
 
 export default function Home() {
   // Here I move each section of the website into it's own component. From my experience these components have a good chance of being reused in some form or fashion on other pages, Thus writing reusable components is key here.
-
+  // I am adding fake data to the components from the page level as props where most likely API calls would be made. 
   return (
   <>
     <Header data={navData}/>
@@ -21,10 +21,10 @@ export default function Home() {
       <Hero />
       <CardCTA data={ctaData}/>
       <div className={styles.content}>
-        <Services />
+        <Services data={servicesData}/>
         <div className={styles.twoColumn}>
-          <LinkList type={'updates'}/>
-          <LinkList type={'calendar'}/>
+          <LinkList type={'updates'} title={'Recent Updates'} data={updatesData}/>
+          <LinkList type={'events'} title={'Calendar of Events'} data={eventsData}/>
         </div>
       </div>
     </main>
