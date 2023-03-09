@@ -1,2 +1,9 @@
 @import '../styles/mixins.scss';
 @import '../styles/vars.scss';
+
+.main {
+    margin-top: 5.2rem;
+    @media screen and (min-width: $small) {
+        margin-top: 12.8rem;
+    }
+}

@@ -4,13 +4,17 @@
 .header {
     align-items: center;
     background: $white;
-    border-bottom: 2px solid $blue1;
-    display: flex;
+    border-bottom: 2px solid $blue2;
+    display: grid;
+    grid-template-columns: 1fr;
+    left: 0;
+    position: absolute;
+    top: 0;
     width: 100%;
 
     @media screen and (min-width: $small) {
-        border-bottom: 8px solid $blue1;
-        padding: 1rem 0;
+        border-bottom: 8px solid $blue2;
+        grid-template-columns: auto 1fr;
     }
 }
 
@@ -18,16 +22,35 @@
     align-items: center;
     background: $blue4;
     border: none;
+    cursor: pointer;
     display: flex;
+    height: 5rem;
     flex-wrap: wrap;
     justify-content: center;
     padding: 1rem;
-    width: 8rem;
+    width: 5rem;
 
     span {
         color: $white;
+        display: block;
         font-size: 1.1rem;
         letter-spacing: 0.5rem;
+    }
+
+    svg {
+        display: block;
+        height: 3rem;
+        margin: 0;
+        width: 100%;
+    }
+
+    @media screen and (min-width: $small) {
+        height: 100%;
+        width: 8rem;
+
+        svg {
+            height: auto;
+        }
     }
 }
 
@@ -35,6 +58,7 @@
     align-items: center;
     display: flex;
     flex: 1 0 auto;
+    padding: 0;
 
     nav {
         margin-left: auto;
@@ -53,25 +77,195 @@
         list-style: none;
         padding: 0;
     }
+
+    img {
+        margin-left: 0.5rem;
+    }
+
+    @media screen and (min-width: $small) {
+        margin-left: 0;
+        padding: 1rem 2rem 1rem 3rem;
+    }
 }
 
 .headerTextContain {
     flex: 1 0 auto;
+    margin-left: 0.5rem;
+
+    p {
+        color: $blue3;
+        font-size: 1.3rem;
+        font-weight: 700;
+        line-height: 1.6rem;
+        text-transform: uppercase;
+    }
+
+    .subhead {
+        font-size: 1.1rem;
+        font-style: italic;
+        font-weight: 500;
+        text-transform: none;
+    }
+
+    @media screen and (min-width: $small) {
+        margin-left: 2rem;
+
+        p {
+            font-size: 2.2rem;
+            line-height: 2.6rem;
+        }
+    
+        .subhead {
+            font-size: 1.6rem;
+        }
+    }
 }
 
 .searchButton {
-    @include btnSecondary;
+    align-items: center;
+    background: none;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
+    display: flex;
     height: 5rem;
     padding: 1rem;
     width: 5rem;
 
     svg {
         margin-left: 0;
+        width: 100%;
     }
 
     &:hover, &:active {
         background: $white;
+    }
+
+    @media screen and (min-width: $small) {
+        border: 2px solid $blue4;
+        padding: 1rem;
+    }
+}
+
+.divider {
+    box-shadow: 0 0 2px 2px rgba(0,0,0,0.075);
+    display: block;
+    width: 100%;
+    @media screen and (min-width: $small) {
+        grid-column: span 2;
+    }
+}
+
+.popup {
+    background: $white;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    overflow: auto;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    @media screen and (min-width: $small) {
+        grid-column: span 2;
+        height: auto;
+        left: auto;
+        position: relative;
+        top: auto;
+    }
+}
+
+.mobileCloseIcon {
+    background: none;
+    border: none;
+    height: 5rem;
+    width: 5rem;
+
+    svg {
+        height: 5rem;
+        width: 100%;
+    }
+}
+
+.navContain {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 2rem 0 2rem 2rem;
+
+        a {
+            color: $black;
+            text-decoration: none;
+            line-height: 3.2rem;
+
+            &:hover, &:active {
+                text-decoration: underline;
+            }
+        }
+
+    }
+
+    ul:not(:first-child) li:first-child {
+        a {
+            @include titleUnderlineMain;
+            color: $blue2;
+            display: block;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            padding: 1rem 0;
+            text-transform: uppercase;
+        }
+    }
+
+    ul:first-child {
+        background: $gray7;
+        padding: 0 4rem 0 4rem;
+
+        a {
+            color: $black;
+            border-bottom: 1px solid $gray5;
+            display: block;
+            font-weight: 700;
+            padding: 1rem 0;
+            text-align: center;
+            text-decoration: none;
+            width: 100%;
+
+            &:hover, &:active {
+                text-decoration: underline;
+            }
+        }
+
+        li:last-child {
+            a {
+                border-bottom: none;
+            }
+        }
+    }
+
+    @media screen and (min-width: $small) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto;
+
+        a {
+            font-size: 1.6rem;
+            &:first-child{
+                font-size: 2rem;
+            }
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 2rem 4rem 2rem 4rem;
+        }
+
+        ul:first-child {
+            grid-row: span 2;
+            padding-top: 2rem;
+        }
     }
 }
