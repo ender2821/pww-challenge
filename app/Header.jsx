@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useMediaQuery } from 'react-responsive'
 import styles from "./Header.module.scss";
 import Image from "next/image";
@@ -10,6 +10,7 @@ import MenuIcon from "../public/menu-icon.svg";
 import CloseIcon from "../public/close-icon.svg";
 import CloseIconDark from "../public/close-icon-dark.svg";
 import SearchIcon from "../public/search-icon.svg";
+import SearchIconWhite from "../public/search-icon-white.svg";
 
 import { Roboto_Slab } from "next/font/google";
 const robotoSlab = Roboto_Slab({ subsets: ["latin"] });
@@ -17,6 +18,21 @@ const robotoSlab = Roboto_Slab({ subsets: ["latin"] });
 export default function Header(props) {
   const {data} = props;
   const [menuOpen, setMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const searchRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event)=> {
+      if (searchRef.current && !searchRef.current.contains(event.target)) {
+        setSearchOpen(false);
+      }
+    };
+    document.addEventListener("click", handleClickOutside, true);
+    return () => {
+      document.removeEventListener("click", handleClickOutside, true);
+    };
+  }, [searchRef]);
+
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
 
   const navSectionRender = (number) => {
@@ -36,7 +52,7 @@ export default function Header(props) {
   }
 
   return (
-    <header className={styles.header}>
+    <header className={styles.header} >
       {!isMobile &&
         (menuOpen ? (
           <button
@@ -70,12 +86,14 @@ export default function Header(props) {
             <MenuIcon />
           </div>
         </button>)}
-        <Image
-          src={"/RFALogoFinal.png"}
-          alt={"RFA Logo"}
-          height={isMobile ? 40 : 100}
-          width={isMobile ? 40 : 100}
-        />
+        <Link href="/" className={styles.logo}>
+          <Image
+            src={"/RFALogoFinal.png"}
+            alt={"RFA Logo"}
+            height={isMobile ? 40 : 100}
+            width={isMobile ? 40 : 100}
+          />
+        </Link>
         <div className={styles.headerTextContain}>
           <p className={robotoSlab.className}>South Carolina</p>
           <p className={robotoSlab.className}>
@@ -100,9 +118,16 @@ export default function Header(props) {
           </ul>
         </nav>
         )}
-        <button className={styles.searchButton}>
-          <SearchIcon />
+        <button className={searchOpen ? styles.searchButtonActive : styles.searchButton} ref={searchRef} onClick={() => setSearchOpen(true)}>
+          {searchOpen ? <SearchIconWhite /> : <SearchIcon />}
+          {searchOpen && (
+          <div className={styles.searchMenu}>
+            <input placeholder="Enter search term"/>
+            <button className={styles.btnSecondary}>Search</button>
+          </div>
+          )}
         </button>
+
       </div>
       {!isMobile && <span className={styles.divider}/>}
       {menuOpen && (

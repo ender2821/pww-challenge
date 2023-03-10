@@ -104,3 +104,26 @@
     width: 5rem;
   }
 }
+
+@mixin backToTopButton {
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+
+  span {
+    align-items: center;
+    background: $gray4;
+    border-radius: 50%;
+    display: flex;
+    height: 4rem;
+    justify-content: center;
+    margin-left: 1rem;
+    width: 4rem;
+  }
+
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+}

@@ -73,6 +73,10 @@
         text-transform: uppercase;
     }
 
+    .logo {
+        padding: 0;
+    }
+
     ul {
         display: flex;
         list-style: none;
@@ -124,7 +128,7 @@
 
 .searchButton {
     align-items: center;
-    background: none;
+    background: $white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -132,6 +136,7 @@
     height: 5rem;
     padding: 1rem;
     width: 5rem;
+    transition: background 125ms ease;
 
     svg {
         margin-left: 0;
@@ -139,12 +144,60 @@
     }
 
     &:hover, &:active {
-        background: $white;
+        background: $gray6;
     }
 
     @media screen and (min-width: $small) {
         border: 2px solid $blue4;
         padding: 1rem;
+    }
+}
+
+.searchButtonActive {
+    align-items: center;
+    background: $blue4;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    display: flex;
+    height: 5rem;
+    padding: 1rem;
+    position: relative;
+    width: 5rem;
+
+    svg {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    @media screen and (min-width: $small) {
+        border-radius: 5px 5px 0 0;
+        padding: 1rem;
+    }
+}
+
+.searchMenu {
+    background: $blue4;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    top: 100%;
+
+    @media screen and (min-width: $small) {
+        padding: 2rem;
+    }
+}
+
+.btnSecondary {
+    @include btnSecondary;
+    background: $blue4;
+    border-color: $white;
+    color: $white;
+
+    &:hover, &:focus {
+        background: $blue3;
     }
 }
 

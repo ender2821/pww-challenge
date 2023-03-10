@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image'
 
 import Header from './Header';
@@ -8,6 +10,8 @@ import Services from '../components/Services';
 import LinkList from '../components/LinkList';
 
 import styles from './page.module.scss'
+
+import UpArrowIcon from '../public/up-arrow-icon.svg'
 
 import { navData, ctaData, servicesData, updatesData, eventsData, footerData } from '../fakeData';
 
@@ -25,6 +29,9 @@ export default function Home() {
         <div className={styles.twoColumn}>
           <LinkList type={'updates'} title={'Recent Updates'} data={updatesData}/>
           <LinkList type={'events'} title={'Calendar of Events'} data={eventsData}/>
+        </div>
+        <div className={styles.topButtonContain}>
+          <button className={styles.topButton}onClick={() => window.scrollTo(0,0)}>Back to top<span><UpArrowIcon/></span></button>
         </div>
       </div>
     </main>

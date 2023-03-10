@@ -29,3 +29,18 @@
         grid-template-columns: 1fr 1fr;
     }
 }
+
+.topButtonContain {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem 0;
+    width: 100%;
+
+    @media screen and (min-width: $small) {
+        padding: 4rem 0;
+    }
+}
+
+.topButton {
+    @include backToTopButton;
+}
