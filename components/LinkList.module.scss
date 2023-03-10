@@ -92,7 +92,7 @@
 
     .infoContain {
         border-bottom: 1px solid $gray5;
-        flex: 1 0 auto;
+        flex: 1 0 calc(100% - 9rem);
         margin-left: 2rem;
 
         span {

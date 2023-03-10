@@ -9,7 +9,7 @@ import LinkList from '../components/LinkList';
 
 import styles from './page.module.scss'
 
-import { navData, ctaData, servicesData, updatesData, eventsData } from '../fakeData';
+import { navData, ctaData, servicesData, updatesData, eventsData, footerData } from '../fakeData';
 
 export default function Home() {
   // Here I move each section of the website into it's own component. From my experience these components have a good chance of being reused in some form or fashion on other pages, Thus writing reusable components is key here.
@@ -28,7 +28,7 @@ export default function Home() {
         </div>
       </div>
     </main>
-    <Footer />
+    <Footer data={footerData} />
   </>
   )
 }

@@ -1,2 +1,65 @@
 @import '../styles/mixins.scss';
 @import '../styles/vars.scss';
+
+.footer {
+    background: $blue2;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        padding: 0.5rem 0;
+    }
+
+    a {
+        color: $white;
+        text-decoration: none;
+
+        &:hover, &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    p {
+        color: $white;
+        margin-bottom: 2rem;
+    }
+
+    .addressName {
+        color: $gray4;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+    }
+}
+
+
+.title {
+    color: $white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+
+    @media screen and (min-width: $small) {
+        margin-bottom: 4rem;
+    }
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: 2rem 1rem;
+
+    @media screen and (min-width: $small) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 4rem;
+        padding: 4rem 2rem;
+    }
+}

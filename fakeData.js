@@ -289,4 +289,31 @@ export const eventsData = [
         phone: '(803) 734-2265',
         link: '/',
     },
+];
+
+export const footerData = [
+    {
+        name: 'Privacy Statement',
+        link: '/',
+    },
+    {
+        name: 'FOIA',
+        link: '/',
+    },
+    {
+        name: 'Disclosures and Reporting',
+        link: '/',
+    },
+    {
+        name: 'Report Fraud',
+        link: '/',
+    },
+    {
+        name: 'Accessibility',
+        link: '/',
+    },
+    {
+        name: 'Contact Us',
+        link: '/',
+    },
 ]
