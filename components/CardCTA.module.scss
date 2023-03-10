@@ -15,8 +15,11 @@
     width: 100%;
     @media screen and (min-width: $small) {
         padding: 6rem 2rem;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 6rem;
+    }
+    @media screen and (min-width: $med) {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 

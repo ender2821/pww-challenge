@@ -71,6 +71,10 @@
         padding: 1rem 2rem;
         text-decoration: none;
         text-transform: uppercase;
+
+        &:hover, &:focus {
+            text-decoration: underline;
+        }
     }
 
     .logo {
@@ -301,7 +305,7 @@
     }
 
     @media screen and (min-width: $small) {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto auto;
 
         a {
@@ -321,5 +325,9 @@
             grid-row: span 2;
             padding-top: 2rem;
         }
+    }
+
+    @media screen and (min-width: $med) {
+        grid-template-columns: repeat(4, 1fr);
     }
 }

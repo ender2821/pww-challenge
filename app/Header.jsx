@@ -34,6 +34,7 @@ export default function Header(props) {
   }, [searchRef]);
 
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
+  const isTablet = useMediaQuery({ query: '(max-width: 1200px)' })
 
   const navSectionRender = (number) => {
       return (
@@ -103,7 +104,7 @@ export default function Header(props) {
             Transforming data into solutions for south carolina
           </p>)}
         </div>
-        {!isMobile && (
+        {!isTablet && (
         <nav>
           <ul>
             <li>
